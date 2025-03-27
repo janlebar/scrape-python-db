@@ -16,7 +16,7 @@ all_medicines = {}
 
 # Function to scrape medicines from a given letter page
 def scrape_medicines(letter):
-    url = BASE_URL.format(letter)
+    url = f"{BASE_URL}alpha/{letter}.html"
     response = requests.get(url)
     
     if response.status_code != 200:
